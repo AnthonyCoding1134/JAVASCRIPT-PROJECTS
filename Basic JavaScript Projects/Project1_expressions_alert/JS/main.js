@@ -23,16 +23,27 @@
 
 //document.write(myVar);
 
-var anthony = "the youngest", susan = "the oldest", mom = "the best";
+//var anthony = "the youngest", susan = "the oldest", mom = "the best";
 //document.write(mom);
 
 
-myNum = 25 + 5;
+// myNum = 25 + 5;
 // document.write(myNum);
 
 
-var sent1 = "This is the beginning of the string";
-var sent2 = " and this is the end of the string";
+// var sent1 = "This is the beginning of the string";
+// var sent2 = " and this is the end of the string";
 
-var fullSentence = sent1 + sent2;
-document.write(fullSentence);
+// var fullSentence = sent1 + sent2;
+// document.write(fullSentence);
+
+// function myFirstFunc(){
+//     var str = "I dont get it";
+//     document.getElementbyId('aButton').innerHTML = str
+    
+// }
+
+
+function mySecondFunc() {
+document.getElementById("demog").innerHTML=Date();
+}
