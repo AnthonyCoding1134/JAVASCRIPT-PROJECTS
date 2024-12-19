@@ -12,3 +12,11 @@ function timeToConcatenate() {
     oneSentence += " prior to C# and asp.net";
     document.getElementById('concatenate').innerHTML = oneSentence;
 }
+
+function multiplyBy3(num){
+   var product = num * 3;
+   document.getElementById("whatever").innerHTML = product;
+}
+
+//document.write(multiplyBy3(5));
+
