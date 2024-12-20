@@ -48,7 +48,7 @@ document.getElementById('incrementor').innerHTML = incrementor;
 
 var pencils = 25;
 pencils--;
-document.write("The number of pencils we have is " + pencils);
+//document.write("The number of pencils we have is " + pencils);
 
 // document.write(br);
 document.write("<br>");
@@ -66,3 +66,5 @@ document.write("<br>");
 document.write("<br>");
 
 document.write("7.8 rounded down to nearest integer is " + Math.floor(7.8));
+
+console.log(Math.abs(-3.4));
