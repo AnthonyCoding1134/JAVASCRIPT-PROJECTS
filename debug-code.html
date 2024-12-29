@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Using the Console to Debug Code</title>
+        <meta charset="utf-8">
+    </head>
+    <body onload="pageLoad()">
+        <button onclick="clickCount()">counter</button>
+        <button onclick="resetCount()">reset</button>
+        <p id="whatev"></p>
+        <script>
+            //Creates  a greeting when the page first loads
+            function pageLoad() {
+                var greeting ="Welcome to ";
+                greeting += "learning how to debug code ";
+                greeting += "using the console with dev tools!";
+                window.alert(greeting);
+            }
+            //sets default count to 0
+            var nething = 0;
+
+            //counts # of clicks
+            function clickCount() {
+                nething++;
+                document.getElementById("whatev").innerHTML = nething;
+            }
+            //Resets # of clicks
+            function resetCount() {
+                // Setting var to empty string ensures any text that was displayed will be removed
+                var nething = "";
+                document.getElementById("whatev").innerHTML = nething;
+            }
+        </script>
+    </body>
+</html>

@@ -34,7 +34,7 @@ function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
-// The picture that is shown all depends on which one is assigned the "block" class.
+// The picture that is shown all depends on which one is assigned the "block" class below
 // Picture with the Block class is determined by the slide index variable
 function showSlides(n) {
     let i;
