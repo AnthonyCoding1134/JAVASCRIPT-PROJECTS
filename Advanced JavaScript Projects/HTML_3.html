@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Javascript/JavaScript_3.js" defer></script>
+</head>
+<body>
+    <!--HTML DATA ATTRIBUTES.  Always starts with "data-"-->
+    <ul>
+        <li onclick = "displayEnergySource (this)" id="fossil" 
+        data-fuel-type="oil">Fossil</li>
+        <li onclick="displayEnergySource(this)" id="nuclear" 
+        data-fuel-type= "nuclear fission">Nuclear</li>
+        <li onclick="displayEnergySource(this)" id="renewables"
+        data-fuel-type="solar">Renewables</li>
+        <li onclick="displayEnergySource(this)" id="secondary"
+        data-fuel-type="electricity">Secondary</li>
+
+    </ul>
+</body>
+</html>

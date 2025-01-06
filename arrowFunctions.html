@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+    
+</head>
+
+
+<body>
+    <p id="displayAge" onclick="checkAge()">Here</p>
+
+
+    <script>
+        //Regular Function
+        function add6(num) {
+            return num + 6;
+
+        }
+        document.write(add6(2)); //8
+
+        document.write("<br>");
+
+        //Arrow Function
+        add6 = (num) =>  num + 6;
+       document.write(add6(12));   //18
+       document.write("<br>");
+
+       var ages = [2, 10, 18, 20, 13, 15, 30];
+
+       //Using the arrow function to pass in a parameter of age
+       //checkAge = (age) => age >= 18;
+       function checkAge(age) {
+        age >= 18;
+       }
+
+       /*The .some() method iterates through an array  to check if one equals true. 
+       If it finds a true present in the array the .some() 
+       method ends and does not check the remaining values.*/
+       document.getElementById('displayAge').innerHTML = ages.some(checkAge);
+        
+    </script>
+
+
+
+</body>
+</html>

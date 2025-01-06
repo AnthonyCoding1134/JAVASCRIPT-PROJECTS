@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running JS in Console</title>
+</head>
+<body>
+    <p id ="globalVariables" onclick="global()">Global - Click Here</p>
+    <p id="localVariables" onclick="local()">Local - Click Here</p>
+    
+    <hr>
+
+    <p id="concat" onclick="concatenate()">Click here for concatenated sentence</p>
+    <hr>
+    <button onclick="newCourse()">Click here for new course</button>
+    <p id="displayCourse"></p>
+    <!--HR is horizontal row-->
+    <hr>
+
+    <p id="displayAge"></p>
+    <hr>
+    <p id="win"></p>
+    <hr>
+    <p id="urldemo"></p>
+    <hr>
+    <button onclick="openWindow()">Open Window</button>
+    <button onclick="closeWindow()">Close Window</button>
+    <hr>
+    <button onclick="confirmTime()">Confirm now!</button>
+
+    <!--Getting elements by class name-->
+    <h1 class="testing">I am an H1 element</h1>
+    <h3 class="testing">I am an h3 element</h3>
+    <button onclick="getClass()">CLick me!</button>
+
+    <!--THe Canvas element allows graphics in conjunction w/ JS-->
+    <canvas id="draw" width="500" height="250" style="border: 5px solid black;"></canvas>
+    <hr>
+    <canvas id="gradient" width="500" height="250" style="border: 5px solid black;"></canvas>
+
+
+    <script>
+        // a & b are global varuabbles that can be edited in the console
+        let a = 3;
+        let b = 4;
+
+        function global() {
+            result = a + b;
+            document.getElementById("globalVariables").innerHTML = "Global variable a (" + a + ") plus global variable b (" + b + ") equals " + result;
+        }
+
+        function local() {
+            let c = 4;
+            let d = 3;
+            result = c + d;
+            document.getElementById("localVariables").innerHTML = "Local variable c (" + c + ") plus local variable d (" + d + ") equals " + result;
+        }
+
+        let sentence1;
+        let sentence2;
+
+        function concatenate() {
+            let concatSent = sentence1.concat(sentence2);
+
+            //Display Result on webpage
+            document.getElementById("concat").innerHTML = concatSent;
+
+            // Display result in console
+            console.log(concatSent);
+        }
+
+            //Creates a course object constructor
+            function Course(Name, Type, Duration) {
+                this.courseName = "Todays new course is: " + Name + "<br>";
+                this.courseType = "Type: " + Type + "<br>";
+                this.courseDur = "Course Length " + Duration + "hours";
+
+
+
+            }
+
+            let js = new Course("JS", "Code", 55);
+            let py = new Course("Python", "Code", 90);
+
+        // get user input and calc age based on year
+        // let year = prompt("Type in year you were born");
+        //let yearNow = new Date().getFullYear();
+        //let age = Math.floor(yearNow - year);
+
+        // Window object properties
+        window.name = "coolWindowName";
+        document.getElementById("win").innerHTML = window.name;
+
+        //Console Object
+        window.console.error('You are awful at this');
+
+        for (let i = 0; i < 5; i++) {
+         console.count();
+}
+
+    let myUrl = window.document.URL;
+    document.getElementById("urldemo").innerHTML = myUrl;
+
+    //Windows object methods
+
+    //opens & closes a window in browser
+    let myWin;
+    function openWindow() {
+        myWin = window.open("", "", "width=200,height=100");
+    }
+
+    function closeWindow() {
+        myWin.close();
+    }
+
+    // confirm message
+    function confirmTime(){
+        confirm("Approve of something!");
+    }
+    xy = 5;
+    var xy = 10;
+
+    console.log(xy);  //10
+
+    //It’s safest to simply declare variables at the beginning 
+    // (top) of their respective scope because they’ll be “moved to the top” during execution anyways.
+
+    function getClass(){
+       var theClass = document.getElementsByClassName("testing");
+       theClass[0].innerHTML = "Time to change some things!";
+       theClass[1].innerHTML = "ME TOO!";
+    }
+
+    // canvas element for graphics
+    const myCanvas = document.getElementById("draw");
+    const superColor = myCanvas.getContext("2d");
+    superColor.fillStyle = "red";
+    superColor.fillRect(10, 1, 500, 300);
+
+    // createLinearGradient() Method
+    const myCanvas2 = document.getElementById("gradient");
+    const moreColor = myCanvas2.getContext('2d');
+
+    const grd = moreColor.createLinearGradient(0, 0, 170, 0);
+    grd.addColorStop(0, "black");
+    grd.addColorStop(1, "white");
+
+    moreColor.fillStyle = grd;
+    moreColor.fillRect(20, 20, 150, 100)
+
+    </script>
+</body>
+</html>
