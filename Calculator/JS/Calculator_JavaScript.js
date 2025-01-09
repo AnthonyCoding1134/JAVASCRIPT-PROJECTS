@@ -1,3 +1,4 @@
+// Making it so that Jordan cant break
 // Create object to keep track of values
 const Calculator = {
     // Displays 0 on the calculator screen
@@ -27,7 +28,7 @@ function Input_Digit(digit) {
     }
 }
 
-// This section handles decimal points
+// This section deals with decimal points
 function Input_Decimal(dot) {
     //This ensures the accidental clicking of the decimal point doesnt
     // cause bugs in the application
@@ -126,7 +127,7 @@ if(target.classList.contains('decimal')) {
     return;
 }
 
-//Ensures that AC clears all inouts from the Calculator screen
+//Ensures that AC clears all inputs from the Calculator screen
 if(target.classList.contains('all-clear')) {
     Calculator_Reset();
     Update_Display();
