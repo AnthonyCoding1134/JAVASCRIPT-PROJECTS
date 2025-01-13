@@ -23,7 +23,7 @@ function Input_Digit(digit) {
 
     } else {
         //This overwrites Display_Value if the current value is 0
-        // otherwise it adds on to it
+        // otherwise it concatenates it
         Calculator.Display_Value = Display_Value === '0' ? digit : Display_Value + digit;
     }
 }
@@ -40,7 +40,7 @@ function Input_Decimal(dot) {
     }
 }
 
-//This section handles operators
+//This section handles operators. 
 function Handle_Operator(Next_Operator) {
     const {Firstt_Operand, Display_Value, operator} = Calculator;
     //When an operator key is pressed we convert the current number
@@ -48,7 +48,7 @@ function Handle_Operator(Next_Operator) {
     // Calculator.First_Operand if it doesnt already exist
    const Value_Of_Input = parseFloat(Display_Value);
    //checks if an operator already exists & if Wait_Second_Operand is true,
-   // then updates the operator and exits from the function.
+   // it updates the operator and exits from the function.  Allows us to change operators basically
    if(operator && Calculator.Wait_Second_Operand) {
     Calculator.operator = Next_Operator;
     return;
@@ -56,6 +56,7 @@ function Handle_Operator(Next_Operator) {
 
    if(Firstt_Operand == null) {
     Calculator.Firstt_Operand = Value_Of_Input;
+
    } else if (operator) { // Checks if an operator already exists
     const Value_Now = Firstt_Operand || 0;
     //If operator exists- property lookup is performed for the operator
@@ -104,8 +105,7 @@ Update_Display();
 const keys = document.querySelector(".calculator-keys");
 
 keys.addEventListener('click', (event) => {
-    //The target variable is an object that represents the element 
-    // that was clicked
+    //Destructures the event object to get the target, which represents the clicked element (the button).
     const { target } = event;
     //If the element that was clicked on is not a button- exit the function
     if(!target.matches('button')) {
