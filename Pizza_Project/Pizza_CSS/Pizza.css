@@ -1,0 +1,104 @@
+body {
+    background-color: maroon;
+}
+
+h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: aliceblue;
+    justify-content: center;
+    
+    
+
+}
+
+h3{
+    font-family: 'Courier New', Courier, monospace;
+    color: lightslategray
+}
+
+div{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: oldlace;
+}
+
+#menuBG {
+    width: 400px;
+    height: 470px;
+    margin-left: 400px;
+    justify-content: center;
+    
+}
+
+#frmMenu {
+    width: 400px;
+    height: 200px;
+}
+
+#totalPrice {
+    width: 200px;
+    height: 190px;
+    margin: 0 auto;
+    float: right;
+}
+
+.left {
+    width: 200px;
+    height: 200px;
+    display: table-cell;
+    padding-right: 25px;
+    
+    
+
+    
+}
+
+.center {
+    width: 200px;
+    height: 200px;
+    display: table-cell;
+    padding-right: 25px;
+
+    
+}
+
+.right {
+
+    padding-left: 25px;
+    width: 200px;
+    height: 200px;
+    display: table-cell;
+
+    
+}
+
+#showText {
+    width: 200px;
+    height: 190px;
+    margin: 0px auto;
+    float: left;
+}
+
+#cart {
+    top: 0; 
+    margin: 0px auto;
+    width: 400px; 
+    height: 200px;
+}
+
+#btnOrder {
+    margin: 10px 0px 0px 100px;
+    width: 100px;
+    height: 40px;
+}
+
+.Row {
+    display: table;
+    width: 100%; /*Optional*/
+    table-layout: fixed; /*Optional*/
+    border-spacing: 10px; /*Optional*/
+    margin-left: 0px;
+   
+    
+    
+  /*  margin: auto; */
+}
