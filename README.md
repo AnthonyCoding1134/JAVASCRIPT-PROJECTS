@@ -5,7 +5,7 @@ This repository will contain Javascript projects from my Tech Academy course.
 Here are some of the projects I made with Javascript:
 
 
-To-Do app:  
+To-Do app:         https://github.com/AnthonyCoding1134/JAVASCRIPT-PROJECTS/tree/main/Advanced%20JavaScript%20Projects/Javascript/todo_app
 
 Pizza Menu:        https://github.com/AnthonyCoding1134/JAVASCRIPT-PROJECTS/tree/main/Pizza_Project
 
