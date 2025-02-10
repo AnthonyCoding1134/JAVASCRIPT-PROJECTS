@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REACT ASSIGNMENT</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+</head>
+<body>
+    <div id = "like_button_container"></div>
+    <script>
+        const X = React.createElement;
+
+        class likeButtton extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = { likedd: false};
+            
+        }
+
+        render() {
+            if(this.state.likedd) {
+                return 'You clicked the like button';
+            }
+
+            return X(
+                'button',
+                {onClick: () => this.setState({ likedd: true})  }, 
+                'Likee'
+            );
+        }
+    }
+
+    const domContainer = document.querySelector('#like_button_container');
+    ReactDOM.render(X(likeButtton), domContainer);
+    </script>
+
+</body>
+</html>

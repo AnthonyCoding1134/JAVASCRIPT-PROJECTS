@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        @keyframes example {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: yellow;
+            }
+        }
+
+
+        @keyframes zoominoutsinglefeatured {
+            0% {
+                transform: scale(1, 1);
+            }
+
+            50% {
+                transform: scale(1.05, 1.05);
+            }
+
+            100% {
+                transform: scale(1, 1);
+            }
+        }
+
+        .zooming {
+            animation: zoominoutsinglefeatured 15s forwards;
+            height: 500px;
+            width: 800px;
+        }
+
+        #funkyButton {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: example;
+            animation-duration: 4s;
+        }
+
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #0b0707;
+            color: white;
+            padding: 26px 0px;
+            border: coral;
+            cursor: crosshair;
+            opacity: 1.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Target last paragraph in content */
+        #content p:nth-of-type(3) {
+            color: red;
+            font-size: 25px;
+        }
+
+        p:last-child {
+
+            font-size: 25px;
+        }
+
+        /* Slideshow */
+        #slideshow {
+            margin: 50px auto;
+            position: relative;
+            width: 120px;
+            height: 120x;
+            padding: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+
+        #slideshow > div {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        div.sticky {
+            position: sticky;
+            margin-bottom: 0px;
+            bottom: 0;
+            background-color: orange;
+            padding: 40px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="#sky">Jump to section on the sky</a>
+
+    <div id="content">
+
+        <img class="zooming" src="https://media.npr.org/assets/img/2022/08/21/moon1_sq-89f284a0491e12e820e3e74cb191e5536b5c8b5d.jpg?s=1100&c=85&f=jpeg"
+            alt="Moon">
+
+        <p>
+            The Moon is Earth's only natural satellite. It orbits at an average distance of 384,400 km (238,900 mi),
+            about 30 times the diameter of Earth. Tidal forces between Earth and the Moon have synchronized the Moon's
+            orbital period
+            with its rotation period (lunar day) at 29.5 Earth days, causing the same side of the Moon to always face
+            Earth.
+            The Moon's gravitational pull is the main driver of Earth's tides.
+        </p>
+
+        <p>
+            Bacon ipsum dolor amet pancetta turkey tenderloin picanha boudin, drumstick cupim. Bacon flank pastrami
+            capicola. Porchetta ball tip tenderloin, capicola ham hock meatloaf ribeye t-bone kielbasa cupim tongue
+            leberkas pig. Pork chop beef short loin, spare ribs ground round salami ball tip brisket turkey sausage jowl
+            short ribs burgdoggen chicken cupim. Turducken boudin pancetta pastrami. Swine venison sirloin, pork chop
+            biltong buffalo pork ham meatloaf. Andouille beef ribs pastrami shank.
+        </p>
+        <p>
+            Tail brisket porchetta drumstick, bacon ham buffalo chicken. Meatball pig corned beef ground round capicola
+            sirloin. Swine tenderloin turkey, beef boudin fatback pork chop filet mignon pig jowl drumstick. Andouille
+            kevin ham rump cupim. Prosciutto shank frankfurter biltong rump, jowl leberkas pork chop bacon shankle
+            corned beef kevin pancetta pork strip steak. Andouille bresaola prosciutto strip steak, chislic chuck
+            boudin. Short ribs cupim boudin pork pork belly.
+        </p>
+        <p>
+            Shankle flank kevin bacon cow, ham leberkas pastrami tongue shoulder chicken ribeye doner. Capicola jowl
+            pancetta landjaeger beef ribs drumstick shankle doner alcatra short loin shank biltong. Bacon brisket
+            hamburger pastrami. Beef ribs kielbasa shoulder spare ribs chuck brisket short loin. Ham kielbasa pork loin
+            pancetta.
+        </p>
+
+        <p>
+            Venison pork chop spare ribs, salami ham pig beef ribs meatloaf pancetta fatback bresaola andouille ground
+            round chicken. Andouille salami buffalo brisket, short ribs cupim corned beef kielbasa chislic turkey.
+            Meatball ball tip chicken ham. Sirloin flank picanha shoulder. Short ribs short loin corned beef, shankle
+            beef strip steak pastrami alcatra.
+        </p>
+        <p>
+            Prosciutto frankfurter pancetta, corned beef cow filet mignon short loin kevin chicken pork drumstick chuck.
+            Shankle beef flank buffalo pork pork chop tongue chuck corned beef sausage. Short ribs sirloin ham t-bone.
+            Prosciutto andouille doner, ham hock pig turkey short ribs pork belly capicola fatback ham strip steak
+            leberkas burgdoggen. Drumstick chuck beef ball tip. Ribeye short ribs brisket swine. Picanha porchetta filet
+            mignon sirloin, brisket cow pork buffalo strip steak cupim salami shoulder
+        </p>
+        <p>
+            Bacon ipsum dolor amet pancetta turkey tenderloin picanha boudin, drumstick cupim. Bacon flank pastrami
+            capicola. Porchetta ball tip tenderloin, capicola ham hock meatloaf ribeye t-bone kielbasa cupim tongue
+            leberkas pig. Pork chop beef short loin, spare ribs ground round salami ball tip brisket turkey sausage jowl
+            short ribs burgdoggen chicken cupim. Turducken boudin pancetta pastrami. Swine venison sirloin, pork chop
+            biltong buffalo pork ham meatloaf. Andouille beef ribs pastrami shank.
+        </p>
+        <p>
+            Prosciutto frankfurter pancetta, corned beef cow filet mignon short loin kevin chicken pork drumstick chuck.
+            Shankle beef flank buffalo pork pork chop tongue chuck corned beef sausage. Short ribs sirloin ham t-bone.
+            Prosciutto andouille doner, ham hock pig turkey short ribs pork belly capicola fatback ham strip steak
+            leberkas burgdoggen. Drumstick chuck beef ball tip. Ribeye short ribs brisket swine. Picanha porchetta filet
+            mignon sirloin, brisket cow pork buffalo strip steak cupim salami shoulder
+        </p>
+
+       <!--  <div id="slideshow">
+            <div>
+                <img src="Javascript/Images/Earth.jpg" alt="earth">
+            </div>
+
+            <div>
+                <img src="Javascript/Images/Jupiter.jpg" alt="jupiter">
+            </div>
+
+            <div>
+                <img src="Javascript/Images/Mars.jpg" alt="mars">
+            </div>
+
+            <div>
+                Whoa!
+            </div>
+        </div>
+ -->
+
+    </div>
+    <button id="funkyButton" onclick="openForm()" class="open-button">Open Form</button>
+
+    <p id="sky">The sky is an unobstructed view upward from the surface of the Earth.
+        It includes the atmosphere and outer space. It may also be considered a place
+        between the ground and outer space, thus distinct from outer space.
+    </p>
+
+    <div class="sticky">
+        <form>
+            <h1>Contact Us!</h1>
+            <label for="FirstName">First Name</label>
+            <input type="text" name="fname" id="FirstName">
+        </form>
+    </div>
+
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container" onsubmit="return validateTheForm()" method="post">
+
+            First Name: <input type="text" id="fName">
+            Last Name: <input type="text" id="lName">
+            Phone Number: <input type="tel" id="phone">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    
+
+
+    <script>
+
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        };
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+
+        function validateTheForm() {
+            let x = document.forms["myForm"]["fName"].value;
+            let y = document.forms["myForm"]["lName"].value;
+            let z = document.forms["myForm"]["phone"].value;
+
+            if (x == "" || y == "" || z == "") {
+                alert("The form is not complete");
+                return false;
+            }
+        }
+
+        $("#slideshow > div:gt(0)").hide();
+
+        setInterval(function () {
+            $('#slideshow > div:first')
+                .fadeOut(1000)
+                .next()
+                .fadeIn(1000)
+                .end()
+                .appendTo('#slideshow');
+        }, 3000);
+    </script>
+   
+</body>
+
+</html>

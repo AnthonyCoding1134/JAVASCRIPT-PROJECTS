@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML</title>
+</head>
+<body>
+    <!--Way Easier -->
+    <p id="XML_Example"></p>
+    <script>
+        var XML_Parser_Time, My_XML_Document;
+
+        //creates text string
+        var movie = "<movie>" + 
+            "<name>Donnie Brosco</name>" +
+            "<director>Mike Newell</director>" +
+            "<starring>Al Pacino</starring>" +
+            "<starring>Johnny Depp</starring>" +
+            "<year>1997</year>" +
+            "</movie>";
+
+            //creates XML DOM parser
+            XML_Parser_Time = new DOMParser();
+
+            //creates a new XML DOM Object using the text string
+            My_XML_Document = XML_Parser_Time.parseFromString(movie, "text/xml");
+
+            document.getElementById("XML_Example").innerHTML = My_XML_Document.getElementsByTagName("starring") [1].childNodes[0].nodeValue;   
+    </script>
+    
+    <!--
+    <p id="XML_Example"></p>
+    <script>
+        var XML_Parser_Time;
+
+        //creates text string
+        var movie = "<movie>" + 
+            "<name>Donnie Brosco</name>" +
+            "<director>Mike Newell</director>" +
+            "<starring>Al Pacino</starring>" +
+            "<starring>Johnny Depp</starring>" +
+            "<year>1997</year>" +
+            "</movie>";
+
+            //creates XML DOM parser
+            XML_Parser_Time = new DOMParser();
+
+            //creates a new XML DOM Object using the text string
+            XML_Parser_Time.parseFromString(movie, "text/xml");
+
+          //  document.getElementById("XML_Example").innerHTML = My_XML_Document.getElementsByTagName("starring") [1].childNodes[0].nodeValue;   
+          document.getElementById("XML_Example").innerHTML = XML_Parser_Time.parseFromString(movie, "text/xml").getElementsByTagName("starring") [1].childNodes[0].nodeValue;
+
+    </script>
+    -->
+
+</body>
+</html>

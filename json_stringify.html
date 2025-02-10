@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id = "myDog"></p>
+<p id = "notMyDog"></p>
+<p id = "localStorageExample"></p>
+<script>
+/*JavaScript dictionary object */
+// var dog = {name: "Bud", breed: "Golden Retreiver", color: "Gold"};
+// JS string
+var dog = '{"name": "Bud", "breed": "Golden Retreiver", "color": "Gold"}';
+
+// stringify converts from an obj to a string
+// var JSONstring = JSON.stringify(dog);
+
+//parse converts from a string to an obj
+var JSONstring = JSON.parse(dog);
+
+// document.getElementById("myDog").innerHTML = JSONstring;
+// document.getElementById("notMyDog").innerHTML = dog;
+
+// local storage property lets you save key-value pairs locally in browser (speed)
+localStorage.setItem("favoriteFood", "pizza");
+document.getElementById("localStorageExample").innerHTML = localStorage.getItem("favoriteFood");
+
+document.getElementById('myDog').innerHTML = JSONstring.name + " the " + JSONstring.breed;
+</script>
+
+</body>
+</html>
